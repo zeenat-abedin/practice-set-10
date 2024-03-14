@@ -8,10 +8,10 @@ let response = fetch(url)
 
 response.then((res) => {
     return res.json();
-}).then((contests) => { 
-    console.log(contests)
-    for (const item of contests) {
-        console.log(contests[item]);
+}).then((todos) => { 
+    console.log(todos)
+    for (const item of todos) {
+        console.log(todos[item]);
     }
 })
 
