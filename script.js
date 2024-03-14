@@ -3,28 +3,17 @@
 //3. Fetch the note which was saved.
 //4. Delete the note
 
-let url = "https://contests.net/api/v1/all"; 
-    
-// let method = "GET";
-// fetch(url, {method: method})
-//     .then((response) => response.json())
-//     .then((data) => console.log(data))
-    
-// let saveNote = (title, body)=>{
-//     let note ={
-//         title : title ,
-//         body: body
-//         }
-//     let notes = JSON.parse(localStorage.getItem("notes")) || [];
-//     notes.push(note);
-//     localStorage.setItem("notes",JSON.stringify(notes));
-// }
+let url = "https://jsonplaceholder.typicode.com/todos"; 
+let response = fetch(url)  
 
-// let getSavedNotes=()=>{
-//     let notes = JSON.parse(localStorage.getItem("notes"));  
-//     if(!notes){
-//         return [];
-//     } else {
-//         return notes;
-//         }
-//     }
+response.then((res) => {
+    return res.json();
+}).then((contests) => { 
+    console.log(contests)
+    for (const item of contests) {
+        console.log(contests[item]);
+    }
+})
+
+cardContainer.innerHTML = "allCards"
+
