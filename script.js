@@ -10,10 +10,18 @@ response.then((res) => {
     return res.json();
 }).then((todos) => { 
     console.log(todos)
-    for (const item of todos) {
+    for (const item in todos) {
         console.log(todos[item]);
+        ihtml += `<div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+           <h5 class="card-title">${todos[item].title}</h5>
+           <p class="card-text">${todos[item].title}</p>
+           <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>`       
     }
+    cardContainer.innerHTML = ihtml
 })
 
-cardContainer.innerHTML = "allCards"
 
