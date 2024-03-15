@@ -15,7 +15,7 @@ if (!res.ok) {
     console.log(todos)
     for (const item in todos) {
         console.log(todos[item]);
-        ihtml += `<div class="card mx-4 my-4" style="width: 22rem;">
+        ihtml += `<div class="card mx-2 my-2" style="width: 22rem;">
         <img src="https://www.w3schools.com/tags/img_girl.jpg" class="card-img-top" alt="...">
         <div class="card-body">
            <h5 class="card-title">${todos[item].title}</h5>
