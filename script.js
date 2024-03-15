@@ -7,8 +7,12 @@ let url = "https://jsonplaceholder.typicode.com/todos";
 let response = fetch(url)  
 
 response.then((res) => {
+if (!res.ok) {
+        throw new Error('Network response was not ok');
+    }
     return res.json();
 }).then((todos) => { 
+    let ihtml = '';
     console.log(todos)
     for (const item in todos) {
         console.log(todos[item]);
@@ -22,6 +26,8 @@ response.then((res) => {
     </div>`       
     }
     cardContainer.innerHTML = ihtml
-})
+}).catch((error) => {
+    console.error('Error:', error);
+});
 
 
