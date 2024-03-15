@@ -16,12 +16,12 @@ if (!res.ok) {
     console.log(todos)
     for (const item in todos) {
         console.log(todos[item]);
-        ihtml += `<div class="card" style="width: 18rem;">
+        ihtml += `<div class="card" style="width: 22rem;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
            <h5 class="card-title">${todos[item].title}</h5>
            <p class="card-text">${todos[item].title}</p>
-           <a href="#" class="btn btn-primary">Go somewhere</a>
+           <a href="#" class="btn btn-primary">Visit Todos</a>
         </div>
     </div>`       
     }
