@@ -30,6 +30,10 @@ if (!res.ok) {
     console.error('Error:', error);
 });
 
+let a = localStorage.getItem("note");
+alert("Your note is" + " " + a);
 
-let a = prompt("Enter your note")
-localStorage.setItem("note", a)
+let n = prompt("Enter your note")
+if (n) {   
+    localStorage.setItem("note", n)
+}
