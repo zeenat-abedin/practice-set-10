@@ -1,5 +1,4 @@
 //1. Use a free API from the internet and feed your app with live data.
-//2. Create a note saving app which stores your note to localstorage.
 //3. Fetch the note which was saved.
 //4. Delete the note
 
@@ -30,10 +29,19 @@ if (!res.ok) {
     console.error('Error:', error);
 });
 
+//2. Create a note saving app which stores your note to localstorage.
+
 let a = localStorage.getItem("note");
 alert("Your note is" + " " + a);
 
-let n = prompt("Enter your note")
-if (n) {   
-    localStorage.setItem("note", n)
+let b = prompt("Enter your note")
+if (b) {   
+    localStorage.setItem("note", b)
 }
+
+let c = confirm("Do you  want to delete this note?");
+if (c) {
+    localStorage.removeItem("note")
+    alert("Note deleted successfully!")
+}
+    
