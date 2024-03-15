@@ -31,3 +31,5 @@ if (!res.ok) {
 });
 
 
+let a = prompt("Enter your note")
+localStorage.setItem("note", a)
